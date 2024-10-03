@@ -15,11 +15,12 @@ const Navigation: React.FC = () => {
     // const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <Navbar rounded className="fixed w-full z-20 top-0 start-0">
+        <Navbar rounded className="fixed w-full z-20 top-0 start-0 bg-slate-200">
             <Navbar.Brand href="/">
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">BaggScript</span>
             </Navbar.Brand>
             <div className="flex md:order-2">
+                <Search />
                 {session ? (
                     <Dropdown
                         arrowIcon={false}
@@ -46,7 +47,7 @@ const Navigation: React.FC = () => {
                     <>
 
                         <div className='flex gap-2'>
-                            <Search />
+
                             <LoginButton />
                             <RegisterButton />
                         </div>
